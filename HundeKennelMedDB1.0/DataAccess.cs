@@ -17,7 +17,7 @@
             private static SqlDataAdapter adapter = new SqlDataAdapter();
             public SqlTransaction DbTran;
 
-        private static string strConnString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\K.Ushiyama\\source\\repos\\HundeKennelMedDB1.0\\HundeKennelMedDB1.0\\DogsDB2.mdf;Integrated Security=True";
+        private static string strConnString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\K.Ushiyama\\source\\repos\\HundeKennelMedDB1.0\\HundeKennelMedDB1.0\\DogDB.mdf;Integrated Security=True";
 
 
         
