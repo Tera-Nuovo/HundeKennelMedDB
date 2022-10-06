@@ -37,8 +37,8 @@ namespace HundeKennelMedDB1._0
             //insert dog into database
             //specify id
             SqlCommand inserCommand = new SqlCommand("INSERT INTO Dogs (id,Name) VALUES (@id,@Name)");
-            inserCommand.Parameters.AddWithValue("@id", 1);
-            inserCommand.Parameters.AddWithValue("@Name", "Bent");
+            inserCommand.Parameters.AddWithValue("@id", 2);
+            inserCommand.Parameters.AddWithValue("@Name", "Ole");
 
             db.executeQuery(inserCommand);
             testlabel.Content = "dog inserted";
