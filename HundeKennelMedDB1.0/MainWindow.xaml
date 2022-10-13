@@ -7,8 +7,9 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid x:Name="test">
-        <Button Content="Button" HorizontalAlignment="Left" Margin="201,165,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+        <Button x:Name="AddDog" Content="Add Dog" HorizontalAlignment="Left" Margin="129,84,0,0" VerticalAlignment="Top" Click="Button_Click" Width="56"/>
         <Label x:Name="testlabel" Content="Label" HorizontalAlignment="Left" Margin="576,175,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="DeleteDogs" Content="Delete Dogs" Margin="129,195,602,217" Click="DeleteDogs_Click"/>
 
     </Grid>
 </Window>
