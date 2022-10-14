@@ -5,11 +5,32 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:HundeKennelMedDB1._0"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="500" Width="800">
     <Grid x:Name="test">
-        <Button x:Name="AddDog" Content="Add Dog" HorizontalAlignment="Left" Margin="129,84,0,0" VerticalAlignment="Top" Click="Button_Click" Width="56"/>
-        <Label x:Name="testlabel" Content="Label" HorizontalAlignment="Left" Margin="576,175,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="DeleteDogs" Content="Delete Dogs" Margin="129,195,602,217" Click="DeleteDogs_Click"/>
-
+        <Button x:Name="AddDog" Content="Add Dog" HorizontalAlignment="Left" Margin="465,395,0,0" VerticalAlignment="Top" Click="Button_Click" Width="81" Height="34"/>
+        <Button x:Name="DeleteDogs" Content="Delete Dogs" Margin="697,395,0,0" Click="DeleteDogs_Click" HorizontalAlignment="Left" Width="85" Height="34" VerticalAlignment="Top"/>
+        <Button x:Name="SearchDog" Content="Search" HorizontalAlignment="Left" Margin="321,395,0,0" VerticalAlignment="Top" Click="SearchDog_Click" Height="35" Width="62"/>
+        <Label x:Name="searchlable" Content="DogName:" HorizontalAlignment="Left" Margin="6,390,0,0" VerticalAlignment="Top" FontSize="22"/>
+        <TextBox x:Name="txtSearch" HorizontalAlignment="Left" Margin="120,394,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="182" Height="36" FontSize="22"/>
+        <DataGrid x:Name="DataGridView" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="183,57,0,0" HorizontalAlignment="Left" Width="481" Height="315" VerticalAlignment="Top"/>
+        <TextBox x:Name="MinValue" HorizontalAlignment="Left" Margin="36,172,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="MaxValue" HorizontalAlignment="Left" Margin="36,123,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="ShowDogs" Content="Show All Dogs" Margin="573,395,0,0" VerticalAlignment="Top" Height="34" Click="ShowDogs_Click" HorizontalAlignment="Left" Width="91"/>
+        <Label x:Name="MaxLable" Content="Max" HorizontalAlignment="Left" Margin="34,97,0,0" VerticalAlignment="Top" Height="26"/>
+        <Label x:Name="MinLable" Content="Min" HorizontalAlignment="Left" Margin="34,146,0,0" VerticalAlignment="Top" Height="26"/>
+        <Label x:Name="Title" Content="Hunde Kennel Search Specifier" HorizontalAlignment="Left" Margin="30,10,0,0" VerticalAlignment="Top" FontSize="22"/>
+        <Label x:Name="CategoryLable" Content="Category" HorizontalAlignment="Left" Margin="34,49,0,0" VerticalAlignment="Top"/>
+        <Label Content="Sex" HorizontalAlignment="Left" Margin="34,212,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="Category" Margin="36,72,0,0" HorizontalAlignment="Left" Width="120" Height="20" VerticalAlignment="Top">
+            <ComboBoxItem IsSelected="True" Content="HDIndex"/>
+            <ComboBoxItem Content="BackIndex"/>
+        </ComboBox>
+        <Button x:Name="SearchCategory" Content="Update" HorizontalAlignment="Left" Margin="36,282,0,0" VerticalAlignment="Top" Height="43" Width="120" Click="SearchCategory_Click"/>
+        <ComboBox x:Name="Gender" Margin="36,238,0,0" HorizontalAlignment="Left" Width="120" Height="20" VerticalAlignment="Top">
+            <ComboBoxItem IsSelected="True" Content="M"/>
+            <ComboBoxItem Content="F"/>
+            <ComboBoxItem Content="All"/>
+        </ComboBox>
     </Grid>
+
 </Window>

@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Data;  
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace HundeKennelMedDB1._0
 {
@@ -23,12 +24,13 @@ namespace HundeKennelMedDB1._0
     public partial class MainWindow : Window
     {
         DBManager dBManager = new DBManager();
+        
         public MainWindow()
         {
             
             InitializeComponent();
-            
 
+            dBManager.ShowAllDogs(DataGridView);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -57,7 +59,22 @@ namespace HundeKennelMedDB1._0
         {
             DBManager dBManager = new DBManager();
 
-            dBManager DeleteDogs() 
+            //dBManager DeleteDogs() 
+        }
+
+        private void SearchDog_Click(object sender, RoutedEventArgs e)
+        {
+            dBManager.GetDog(txtSearch.Text, DataGridView, MaxValue.Text, MinValue.Text);
+        }
+
+        private void ShowDogs_Click(object sender, RoutedEventArgs e)
+        {
+            dBManager.ShowAllDogs(DataGridView);
+        }
+
+        private void SearchCategory_Click(object sender, RoutedEventArgs e)
+        {
+            dBManager.SortForCategory(DataGridView, MaxValue.Text, MinValue.Text, Category.Text, Gender.Text);
         }
     }
 }
