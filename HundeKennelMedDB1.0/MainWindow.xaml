@@ -7,9 +7,14 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid x:Name="test">
-        <Button x:Name="AddDog" Content="Add Dog" HorizontalAlignment="Left" Margin="129,84,0,0" VerticalAlignment="Top" Click="Button_Click" Width="56"/>
-        <Label x:Name="testlabel" Content="Label" HorizontalAlignment="Left" Margin="576,175,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="DeleteDogs" Content="Delete Dogs" Margin="129,195,602,217" Click="DeleteDogs_Click"/>
+        <Button x:Name="AddDog" Content="Add Dog" HorizontalAlignment="Left" Margin="10,20,0,0" VerticalAlignment="Top" Click="Button_Click" Width="56"/>
+        <Label x:Name="testlabel" Content="Label" HorizontalAlignment="Left" Margin="739,199,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="DeleteDogs" Content="Delete Dogs" Margin="10,56,0,0" Click="DeleteDogs_Click" HorizontalAlignment="Left" Width="69" Height="22" VerticalAlignment="Top"/>
+        <Button x:Name="UpdateDog" Content="Update Dog" Margin="10,96,0,0" Click="UpdateDog_Click" Height="20" VerticalAlignment="Top" HorizontalAlignment="Left" Width="69"/>
+        <DataGrid x:Name="DataGridView" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="146,20,209,294" SelectionChanged="DataGrid_SelectionChanged"/>
+        <TextBox x:Name="SearchBox" TextWrapping="Wrap" Text="TextBox" TextChanged="TextBox_TextChanged" Margin="10,188,666,222"/>
+        <Button x:Name="SearchButton" Content="Search" Margin="10,217,711,197" Click="SearchClick"/>
+
 
     </Grid>
 </Window>

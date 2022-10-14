@@ -1,0 +1,1 @@
+﻿SELECT * FROM Dogs WHERE HDindex >= 50 AND HDindex <= 100

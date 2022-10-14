@@ -38,7 +38,7 @@ namespace HundeKennelMedDB1._0
             
 
             // tilføj hund til database
-            dBManager.AddDog("10", "Bango", "", "1", "2", "M", "2", "130", "5", "5");
+            dBManager.AddDog("1", "Karl", "", "1", "2", "M", "2", "90", "5", "5");
 
             //insert dog into database
             //specify id
@@ -55,9 +55,30 @@ namespace HundeKennelMedDB1._0
 
         private void DeleteDogs_Click(object sender, RoutedEventArgs e)
         {
-            DBManager dBManager = new DBManager();
+            
 
-            dBManager DeleteDogs() 
+            dBManager.DeleteDog("1");
+        }
+
+        private void UpdateDog_Click(object sender, RoutedEventArgs e)
+        {
+            dBManager.UpdateDog("12", "5", "Karla", "", "", "", "", "", "", "", "");
+            //dBManager.UpdateDogParameter("@name", "Karla", "4", dBManager.NameupdateCommand);
+        }
+
+        private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void SearchClick(object sender, RoutedEventArgs e)
+        {
+            dBManager.GetDog(SearchBox.Text, DataGridView);
         }
     }
 }
