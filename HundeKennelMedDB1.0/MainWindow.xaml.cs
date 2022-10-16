@@ -22,42 +22,26 @@ namespace HundeKennelMedDB1._0
     /// </summary>
     public partial class MainWindow : Window
     {
-        DBManager dBManager = new DBManager();
         public MainWindow()
         {
-            
+
             InitializeComponent();
-            
 
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 
-            
-            
-
-            // tilføj hund til database
-            dBManager.AddDog("10", "Bango", "", "1", "2", "M", "2", "130", "5", "5");
+            DBAccess db = new DBAccess();
 
             //insert dog into database
             //specify id
-            /*SqlCommand inserCommand = new SqlCommand("INSERT INTO Dogs (id,Name,stambognr) VALUES (@id,@Name,@)");
-            inserCommand.Parameters.AddWithValue("@id", 3);
-            inserCommand.Parameters.AddWithValue("@Name", "Jane");
-            inserCommand.Parameters.AddWithValue("@stambognr", );
-            */
+            SqlCommand inserCommand = new SqlCommand("INSERT INTO Dogs (id,Name) VALUES (@id,@Name)");
+            inserCommand.Parameters.AddWithValue("@id", 2);
+            inserCommand.Parameters.AddWithValue("@Name", "Ole");
 
-
-            
-            
-        }
-
-        private void DeleteDogs_Click(object sender, RoutedEventArgs e)
-        {
-            DBManager dBManager = new DBManager();
-
-            dBManager DeleteDogs() 
+            db.executeQuery(inserCommand);
+            testlabel.Content = "dog inserted";
         }
     }
 }
