@@ -40,12 +40,12 @@ namespace HundeKennelMedDB1._0
 
                             if (dt.Rows.Count > 0)
                             {
-                                VisualFeedBack.Content = "Failed";
+                                VisualFeedBack.Content = "Failed Try Another ID";
                                 return false;
                             }
                             else
                             {
-                                VisualFeedBack.Content = "success";
+                                
                                 InsertParameters("@id", id);
                                 InsertParameters("@Name", name);
                                 InsertParameters("@pedigreeNr", pedigreeNr);
@@ -56,12 +56,9 @@ namespace HundeKennelMedDB1._0
                                 InsertParameters("@HDIndex", HDIndex);
                                 InsertParameters("@HeartInfo", HeartInfo);
                                 InsertParameters("@BackInfo", BackInfo);
-
-
-
+                                VisualFeedBack.Content = "success It has been Added to Database";
 
                                 db.executeQuery(inserCommand);
-                                VisualFeedBack.Content = "Success Dog Has been Added To Database";
 
                                 return true;
                             }
