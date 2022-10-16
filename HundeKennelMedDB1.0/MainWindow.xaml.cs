@@ -78,7 +78,7 @@ namespace HundeKennelMedDB1._0
 
         private void SearchClick(object sender, RoutedEventArgs e)
         {
-            dBManager.GetDog(SearchBox.Text, DataGridView);
+            dBManager.GetDog(txtSearch.Text, DataGridView);
         }
     }
 }
