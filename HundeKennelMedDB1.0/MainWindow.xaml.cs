@@ -36,11 +36,12 @@ namespace HundeKennelMedDB1._0
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 
-            
+            UpdatedMainWindow addDogWindow = new UpdatedMainWindow();
+            addDogWindow.Show();
             
 
             // tilføj hund til database
-            dBManager.AddDog("10", "Bango", "", "1", "2", "M", "2", "130", "5", "5");
+            //dBManager.AddDog("10", "Bango", "", "1", "2", "M", "2", "130", "5", "5");
 
             //insert dog into database
             //specify id

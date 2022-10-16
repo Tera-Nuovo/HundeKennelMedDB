@@ -8,22 +8,31 @@
         Title="UpdatedMainWindow" Height="450" Width="800">
     <Grid>
         <Label Content="Name:" HorizontalAlignment="Left" Margin="132,39,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="132,70,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="DogName" HorizontalAlignment="Left" Margin="132,70,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
         <Label Content="Stambog:" HorizontalAlignment="Left" Margin="434,39,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="434,70,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <Label Content="" HorizontalAlignment="Left" Margin="132,109,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="132,140,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="434,109,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="434,140,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="132,200,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="132,231,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="434,200,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="434,231,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="132,281,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="132,312,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="434,281,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="434,312,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Label" HorizontalAlignment="Left" Margin="292,355,0,0" VerticalAlignment="Top"/>
-        <TextBox HorizontalAlignment="Left" Margin="292,386,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="Stambog" HorizontalAlignment="Left" Margin="434,70,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Mother" HorizontalAlignment="Left" Margin="132,109,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="Mother" HorizontalAlignment="Left" Margin="132,140,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Father" HorizontalAlignment="Left" Margin="434,109,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="Father" HorizontalAlignment="Left" Margin="434,140,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Label Content="HDIndex" HorizontalAlignment="Left" Margin="132,200,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="HDIndex" HorizontalAlignment="Left" Margin="132,231,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Hips Info/grade" HorizontalAlignment="Left" Margin="434,200,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="Hips" HorizontalAlignment="Left" Margin="434,231,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Heart Info/Grade" HorizontalAlignment="Left" Margin="132,281,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="Heart" HorizontalAlignment="Left" Margin="132,312,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Back info/grade" HorizontalAlignment="Left" Margin="434,281,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="Back" HorizontalAlignment="Left" Margin="434,312,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Label Content="ID" HorizontalAlignment="Left" Margin="280,334,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="DogsID" HorizontalAlignment="Left" Margin="280,365,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Sex" HorizontalAlignment="Left" Margin="278,42,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="Gender" Margin="280,68,0,0" HorizontalAlignment="Left" Width="120" Height="20" VerticalAlignment="Top">
+            <ComboBoxItem IsSelected="True" Content="M"/>
+            <ComboBoxItem Content="F"/>
+            <ComboBoxItem Content="All"/>
+        </ComboBox>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="444,365,0,0" VerticalAlignment="Top" Click="Button_Click"/>
+        <Label x:Name="VisualFeedBack" Content="Label" HorizontalAlignment="Left" Margin="516,365,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="SuccesRate" Content="Label" HorizontalAlignment="Left" Margin="737,294,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>

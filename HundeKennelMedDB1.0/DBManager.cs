@@ -10,6 +10,10 @@ using System.Windows.Controls;
 using System.Windows;
 using System.Windows.Ink;
 using System.Windows.Media.Media3D;
+using System.Windows.Controls.Primitives;
+using System.Runtime.Remoting.Contexts;
+using System.Text.RegularExpressions;
+using System.Windows.Documents;
 
 namespace HundeKennelMedDB1._0
 {
@@ -17,26 +21,61 @@ namespace HundeKennelMedDB1._0
     {
         SqlCommand inserCommand = new SqlCommand("INSERT INTO Dogs (id,Name,pedigreeNr,father,mother,sex,HD,HDIndex,HeartInfo,BackInfo) VALUES (@id,@Name,@pedigreeNr,@father,@mother,@sex,@HD,@HDIndex,@HeartInfo,@BackInfo)");
         DBAccess db = new DBAccess();
-        public bool AddDog(string id, string name, string pedigreeNr, string father, string mother, string sex, string HD, string HDIndex, string HeartInfo, string BackInfo)
-        {
-            InsertParameters("@id", id);
-            InsertParameters("@Name", name);
-            InsertParameters("@pedigreeNr", pedigreeNr);
-            InsertParameters("@father", father);
-            InsertParameters("@mother", mother);
-            InsertParameters("@sex", sex);
-            InsertParameters("@HD", HD);
-            InsertParameters("@HDIndex", HDIndex);
-            InsertParameters("@HeartInfo", HeartInfo);
-            InsertParameters("@BackInfo", BackInfo);
+        public bool AddDog(string id, string name, string pedigreeNr, string father, string mother, string sex, string HD, string HDIndex, string HeartInfo, string BackInfo,Label VisualFeedBack)
+        { 
+            try
+            {
+                using (SqlConnection cn = new SqlConnection(DBAccess.strConnString))
+                {
+                    if (cn.State == System.Data.ConnectionState.Closed)
+                    {
+                        cn.Open();
+                    }
+                    using (DataTable dt = new DataTable("Dog"))
+                    {
+                        using (SqlCommand cmd = new SqlCommand("SELECT *FROM Dogs WHERE id = " + id, cn))
+                        {
+                            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                            adapter.Fill(dt);
 
-            
-            
+                            if (dt.Rows.Count > 0)
+                            {
+                                VisualFeedBack.Content = "Failed";
+                                return false;
+                            }
+                            else
+                            {
+                                VisualFeedBack.Content = "success";
+                                InsertParameters("@id", id);
+                                InsertParameters("@Name", name);
+                                InsertParameters("@pedigreeNr", pedigreeNr);
+                                InsertParameters("@father", father);
+                                InsertParameters("@mother", mother);
+                                InsertParameters("@sex", sex);
+                                InsertParameters("@HD", HD);
+                                InsertParameters("@HDIndex", HDIndex);
+                                InsertParameters("@HeartInfo", HeartInfo);
+                                InsertParameters("@BackInfo", BackInfo);
 
-            db.executeQuery(inserCommand);
-            
 
-            return true;
+
+
+                                db.executeQuery(inserCommand);
+                                VisualFeedBack.Content = "Success Dog Has been Added To Database";
+
+                                return true;
+                            }
+
+
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Message", MessageBoxButton.OK);
+                return false;
+            }
         }
 
         public bool CheckIfEmpty(string s)
