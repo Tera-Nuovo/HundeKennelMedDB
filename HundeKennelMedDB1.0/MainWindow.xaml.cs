@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Data;  
 using System.Data.SqlClient;
+using System.Configuration;
 
 namespace HundeKennelMedDB1._0
 {
@@ -22,26 +23,58 @@ namespace HundeKennelMedDB1._0
     /// </summary>
     public partial class MainWindow : Window
     {
+        DBManager dBManager = new DBManager();
+        
         public MainWindow()
         {
-
+            
             InitializeComponent();
 
+            dBManager.ShowAllDogs(DataGridView);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 
-            DBAccess db = new DBAccess();
+            
+            
+
+            // tilføj hund til database
+            dBManager.AddDog("10", "Bango", "", "1", "2", "M", "2", "130", "5", "5");
 
             //insert dog into database
             //specify id
-            SqlCommand inserCommand = new SqlCommand("INSERT INTO Dogs (id,Name) VALUES (@id,@Name)");
-            inserCommand.Parameters.AddWithValue("@id", 2);
-            inserCommand.Parameters.AddWithValue("@Name", "Ole");
+            /*SqlCommand inserCommand = new SqlCommand("INSERT INTO Dogs (id,Name,stambognr) VALUES (@id,@Name,@)");
+            inserCommand.Parameters.AddWithValue("@id", 3);
+            inserCommand.Parameters.AddWithValue("@Name", "Jane");
+            inserCommand.Parameters.AddWithValue("@stambognr", );
+            */
 
-            db.executeQuery(inserCommand);
-            testlabel.Content = "dog inserted";
+
+            
+            
+        }
+
+        private void DeleteDogs_Click(object sender, RoutedEventArgs e)
+        {
+            DBManager dBManager = new DBManager();
+
+            //dBManager DeleteDogs() 
+        }
+
+        private void SearchDog_Click(object sender, RoutedEventArgs e)
+        {
+            dBManager.GetDog(txtSearch.Text, DataGridView, MaxValue.Text, MinValue.Text);
+        }
+
+        private void ShowDogs_Click(object sender, RoutedEventArgs e)
+        {
+            dBManager.ShowAllDogs(DataGridView);
+        }
+
+        private void SearchCategory_Click(object sender, RoutedEventArgs e)
+        {
+            dBManager.SortForCategory(DataGridView, MaxValue.Text, MinValue.Text, Category.Text, Gender.Text);
         }
     }
 }

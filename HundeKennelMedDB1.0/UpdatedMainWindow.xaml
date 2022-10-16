@@ -1,0 +1,29 @@
+﻿<Window x:Class="HundeKennelMedDB1._0.UpdatedMainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HundeKennelMedDB1._0"
+        mc:Ignorable="d"
+        Title="UpdatedMainWindow" Height="450" Width="800">
+    <Grid>
+        <Label Content="Name:" HorizontalAlignment="Left" Margin="132,39,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="132,70,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Stambog:" HorizontalAlignment="Left" Margin="434,39,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="434,70,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Label Content="" HorizontalAlignment="Left" Margin="132,109,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="132,140,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="434,109,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="434,140,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="132,200,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="132,231,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="434,200,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="434,231,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="132,281,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="132,312,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="434,281,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="434,312,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="292,355,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="292,386,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+    </Grid>
+</Window>
