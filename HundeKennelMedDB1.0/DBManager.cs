@@ -8,12 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
 using System.Windows;
+using System.Drawing;
 using System.Windows.Ink;
 using System.Windows.Media.Media3D;
 using System.Windows.Controls.Primitives;
 using System.Runtime.Remoting.Contexts;
 using System.Text.RegularExpressions;
 using System.Windows.Documents;
+using System.Windows.Media;
 
 namespace HundeKennelMedDB1._0
 {

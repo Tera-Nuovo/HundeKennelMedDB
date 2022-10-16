@@ -32,5 +32,10 @@ namespace HundeKennelMedDB1._0
             dBManager.AddDog(DogsID.Text, DogName.Text, Stambog.Text, Father.Text, Mother.Text, Gender.Text, Hips.Text, HDIndex.Text, Heart.Text, Back.Text, VisualFeedBack);
 
         }
+
+        private void Hips_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }
